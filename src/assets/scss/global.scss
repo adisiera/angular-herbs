@@ -9,3 +9,9 @@
 @import './setup/functions';
 @import './setup/mixins';
 @import './setup/variables';
+
+//CMPS
+@import '../../app/cmps/herb-list/herb-list.component.scss';
+@import '../../app/cmps/herb-preview/herb-preview.component.scss';
+@import '../../app/cmps/herb-filter/herb-filter.component.scss';
+@import '../../app/cmps/app-header/app-header.component.scss';
