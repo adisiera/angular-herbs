@@ -1,0 +1,10 @@
+<div class="herb-preview flex column auto-center" [routerLink]="['herb',herb.id]" >
+    <div class="img-wrapper flex auto-center">
+        <img src="{{herb.image_url}}" >
+    </div>
+    <div class="info">
+        <p>Name: {{herb.common_name}}</p>
+        <p>Price: {{herb.price}} Shire Pieces</p>
+    </div>
+    <button class="cta-btn" (click)="onBuyHerb.emit(herb)" stop-click-propagation >Buy</button>
+</div>

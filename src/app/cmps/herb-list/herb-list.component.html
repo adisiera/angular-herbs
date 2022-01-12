@@ -1,0 +1,3 @@
+<div class="herb-list grid-gallery ">
+    <herb-preview  *ngFor = "let herb of herbs" [herb]="herb" (click)="onSelectHerb.emit(herb.id)"></herb-preview>
+</div>

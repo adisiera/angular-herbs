@@ -1,0 +1,7 @@
+<div class="herb-app">
+    <h2 class="flex auto-center">Would you like to buy some herbs?</h2>
+    <herb-filter class="flex auto-center" [filterBy$]="filterBy$" (onSetFilter)="onSetFilter($event)" ></herb-filter>
+    <div class="herb-list grid-gallery">
+        <herb-preview *ngFor = "let herb of herbs$ | async" [herb]="herb" (onBuyHerb)="onBuyHerb($event)" ></herb-preview>
+    </div>
+</div>

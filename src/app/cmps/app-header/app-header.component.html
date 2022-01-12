@@ -1,0 +1,24 @@
+<div class="app-header">
+    <div class="screen" ></div>
+    <nav >
+        <button class="menubtn" ><span class="material-icons">menu</span></button>
+        <h3><a routerLink="/">Froda Boggins's Herb Shoppe</a></h3>
+    
+        <ul class="clean-list nav-links">
+            <li><a routerLink="/" routerLinkActive="active-nav" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+            <li><a routerLink="/about" routerLinkActive="active-nav">About</a></li>
+            <li><a routerLink="/herb" routerLinkActive="active-nav">Herbs</a></li>
+        </ul>
+    
+        <div *ngIf="loggedInUser$ | async;let user;else noUser" class="flex align-center user-info">
+            <p>{{user.name}} bought {{user.cart.length}} herbs</p>
+            <button class="logout" (click)="onLogout()">Logout</button>
+        </div>
+    
+        <ng-template #noUser>
+            <button (click)="onLogin()" class="login-btn">Login</button>
+        </ng-template>
+    
+        
+    </nav>
+</div>

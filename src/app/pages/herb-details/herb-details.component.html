@@ -1,0 +1,16 @@
+<div *ngIf="herb" class="herb-details flex column auto-center" >
+    <img src="{{herb.image_url}}" alt="herb image" class="align-self-center">
+    <div>
+        <h2>{{herb.common_name}}</h2>
+        <p>{{herb.price}} Shire Pieces</p>
+        <p>Scientific name: {{herb.scientific_name}}</p>
+        <p>Is it in my vicinity? {{herb.in_vicinity  ? 'Yes, it is!': 'Unfortunately, no.' }} </p>
+    </div>
+    <button class="cta-btn">Buy</button>
+    <div class="flex">
+        <button class="simple-btn" (click)="onRemoveHerb($event)">Remove</button>
+        <button class="simple-btn" (click)="onToggleEdit()" >Edit</button>
+        <button class="simple-btn" (click)="onBack()">Back</button>
+        <!-- <button class="simple-btn" (click)="onSwitchHerb.emit()">Back</button> -->
+    </div>
+</div>

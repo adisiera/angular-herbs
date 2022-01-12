@@ -1,0 +1,12 @@
+<form #form="ngForm" (ngSubmit)="onSaveHerb(form.value)" class="herb-edit simple-form"  >
+    <input #nameInput="ngModel" required type="text" placeholder="Common Name" [ngModel]="herb.common_name" name="common_name">
+    <textarea type="text" placeholder="Description" [ngModel]="herb.scientific_name" name="scientific_name"></textarea>
+    <input required type="number" placeholder="price" [ngModel]="herb.price" name="price">
+    <label for="in_vicinity">
+      In Vicinity
+      <input type="checkbox" id="inStock" [ngModel]="herb.in_vicinity" name="in_vicinity">
+    </label>
+    <p class="form-errors">{{(form.touched && form.invalid)? 'Must fill common name and price!':''}}</p>
+    <button class="cta-btn">Save</button>
+
+</form>

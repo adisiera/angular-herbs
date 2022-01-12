@@ -1,0 +1,11 @@
+.herb-filter {
+  font-family: cereal-regular;
+    label:not(:first-of-type) {
+        margin-inline-start: 12px;
+      }
+      input {
+        margin-inline-start: 6px;
+      }
+      margin-bottom: 26px;
+    
+}
